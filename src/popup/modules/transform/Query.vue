@@ -43,6 +43,7 @@ watch([leftValue, rightValue, isReverse], () => {
                 type="textarea"
                 :rows="5"
                 :disabled="isReverse"
+                :resizable="false"
             ></NInput>
         </template>
         <template v-slot:right>
@@ -52,6 +53,7 @@ watch([leftValue, rightValue, isReverse], () => {
                 type="textarea"
                 :rows="5"
                 :placeholder="isReverse ? `请输入需要序列化的JSON对象,如：${JSON.stringify({ a: 1, b: 2, c: 3 })}` : '请在左侧输入'"
+                :resizable="false"
             ></NInput>
         </template>
     </BlockLayout>

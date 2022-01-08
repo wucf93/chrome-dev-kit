@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { NInput, } from 'naive-ui';
-import dayjs from 'dayjs';
 import { ref, watch } from 'vue';
 import BlockLayout from '../../components/BlockLayout.vue'
 
@@ -26,6 +25,7 @@ watch([leftValue, rightValue, isReverse], () => {
                 :disabled="isReverse"
                 type="textarea"
                 :rows="5"
+                :resizable="false"
             ></NInput>
         </template>
         <template v-slot:right>
@@ -35,6 +35,7 @@ watch([leftValue, rightValue, isReverse], () => {
                 :disabled="!isReverse"
                 type="textarea"
                 :rows="5"
+                :resizable="false"
             ></NInput>
         </template>
     </BlockLayout>
